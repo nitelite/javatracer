@@ -34,8 +34,8 @@ public class Sphere implements Hittable {
 				rec.setT(temp);
 				rec.setP(ray.pointAtParameter(rec.getT()));
 				rec.setNormal(rec.getP().sub(this.center).divide(this.radius));
+				return true;
 			}
-			return true;
 		}
 
 		return false;
